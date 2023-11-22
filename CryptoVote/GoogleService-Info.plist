@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>199313936904-4ulcnnd9ru6lcve9oq45bmgn427unj30.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.199313936904-4ulcnnd9ru6lcve9oq45bmgn427unj30</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA3WLxvQ9boiqYwsKWrQpEs49FDmK-ot44</string>
+	<key>GCM_SENDER_ID</key>
+	<string>199313936904</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Muzaffar-Sharapov.CryptoVote</string>
+	<key>PROJECT_ID</key>
+	<string>cryptovote-4c8f9</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cryptovote-4c8f9.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:199313936904:ios:6486624ecc11c5df</string>
+	<key>DATABASE_URL</key>
+	<string>https://cryptovote-4c8f9.firebaseio.com</string>
+</dict>
+</plist>

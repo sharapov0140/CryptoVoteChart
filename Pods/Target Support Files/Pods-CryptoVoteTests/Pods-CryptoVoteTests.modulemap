@@ -1,0 +1,6 @@
+framework module Pods_CryptoVoteTests {
+  umbrella header "Pods-CryptoVoteTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
