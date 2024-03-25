@@ -52,31 +52,17 @@ struct ForecastDay: Codable {
 }
 
 struct dat: Codable {
+    //add high, open, closed
+    var open: Double
+    var high: Double
     var low: Double
+    var close: Double
     var time: Int
+    
 }
 
 
 // Add your convertUnixTimeToDateString function here.
-
-
-
-
-
-
-
-//struct ForecastDay: Codable {
-//    
-//    var Data: [dat]
-//
-//
-//}
-//
-//struct dat: Codable {
-//    var low : Double
-//    var time : Int
-//    
-//}
 
 
 

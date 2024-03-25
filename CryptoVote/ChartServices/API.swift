@@ -108,10 +108,10 @@ final class API {
         failure: @escaping (Error) -> Void
         )
     {
-        if let cahcedData: T = StorageChart.getCache(for: endpoint) {
-            success(cahcedData)
-            return
-        }
+//        if let cahcedData: T = StorageChart.getCache(for: endpoint) {
+//            success(cahcedData)
+//            return
+//        }
         
         guard var urlComponents = endpoint.urlComponents else { return }
         

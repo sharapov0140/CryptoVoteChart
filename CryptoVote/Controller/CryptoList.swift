@@ -21,15 +21,15 @@ class CryptoList: UITableViewController, UISearchBarDelegate  {
     var searchBar = UISearchBar()
     var inSearchMode = false
     var currentKey: String?
-    var repos: Results<Dog>!
+//    var repos: Results<Dog>!
     let realm = try! Realm()
   //  let gitHub = GitHubAPI()
-    var coins = [Dog]()
-    var coin: Dog?
+//    var coins = [Dog]()
+//    var coin: Dog?
     var cryptStat: cryptoCoinCapJson?
     var crypto: [cryptoCoinCapJsonPeriod]?
     var cryptos = [cryptoCoinCapJson]()
-    let myDog = Dog()
+//    let myDog = Dog()
     var arraySymbol = [String]()
     
     override func viewDidLoad() {

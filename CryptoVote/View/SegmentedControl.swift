@@ -25,7 +25,7 @@ final class SegmentedControl: UIControl {
                            NSLocalizedString("1D", comment: ""),
                            NSLocalizedString("1W", comment: ""),
                            NSLocalizedString("1M", comment: ""),
-                           NSLocalizedString("6M", comment: ""),
+                           NSLocalizedString("3M", comment: ""),
                            NSLocalizedString("1Y", comment: ""),
                            NSLocalizedString("ALL", comment: "")]
         {

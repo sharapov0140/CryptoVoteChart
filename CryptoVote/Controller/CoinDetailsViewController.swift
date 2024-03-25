@@ -393,12 +393,12 @@ class CoinDetailsViewController: UIViewController {
     
     
     
-    private var asset: Asset?
+//    private var asset: Asset?
     private let animation = CATransition()
     private let feedBackGenerator = UIImpactFeedbackGenerator()
     var originFrame = CGRect.zero
     var crypto: cryptoCoinCapJsonPeriod?
-    var votedCrypto: Post?
+//    var votedCrypto: Post?
     var symbol: String?
     let chartView = ChartView()
     let segmentedControl = SegmentedControl()
@@ -533,40 +533,32 @@ class CoinDetailsViewController: UIViewController {
     private func requestData(for type: API.EndPoint.ChartType) {
         
         
-//        if crypto?.CoinInfo.Name != nil {
-//            let symbol = crypto?.CoinInfo.Name
-//            print(symbol)
-//
-//        }
-//
-//        else {
-//            guard let symbol = votedCrypto?.symbol else {return}
-//            print(symbol)
-//        }
-
-        
-  //      guard let symbol = votedCrypto?.symbol else {return}
-        
         guard let symbol = crypto?.symbol else { return }
         
 
         API.requestChartData(type: type, for: symbol,
                              success: { [weak self] chartData in
-                                guard let slf = self else { return }
-                                slf.chartView.layer.add(slf.animation, forKey: kCATransition)
-                                slf.chartView.data = chartData.Data.map { $0.low }
+            guard let slf = self else { return }
+                    slf.chartView.layer.add(slf.animation, forKey: kCATransition)
+
+                    // Adjusting the mapping to create an array of tuples
+                    slf.chartView.data = chartData.Data.map { (value: $0.low, timestamp: $0.time) }
+
+                    slf.activityIndicator.stopAnimating()
+                    slf.activityIndicator.isHidden = true
+                    slf.noDataView.isHidden = true
+
+                    let pricesL = chartData.Data.map { $0.low }
+                    let pricesH = chartData.Data.map { $0.high }
+                    let pricesO = chartData.Data.map { $0.open }
+                    let pricesC = chartData.Data.map { $0.close }
                                 
-                                slf.activityIndicator.stopAnimating()
-                                slf.activityIndicator.isHidden = true
                                 
-                                slf.noDataView.isHidden = true
-                                
-                                let prices = chartData.Data.map { $0.low }
-//                                let times = chartData.Data.map { $0.time }
+                    let times = chartData.Data.map { $0.time }
                                 
                                 Formatter.formatProfit(label: slf.changeLabel,
-                                                       firstValue: prices[0],
-                                                       lastValue: prices[prices.count - 2],
+                                                       firstValue: pricesL[0],
+                                                       lastValue: pricesL[pricesL.count - 2],
                                                        maximumFractionDigits: 5)
             },
                              failure: { [weak self] error in

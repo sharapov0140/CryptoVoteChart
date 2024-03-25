@@ -16,38 +16,83 @@ final class ChartView: UIView {
     
     // MARK: - Public Properites
     
-    var data: [Double] = [] {
+//    var data: [Double] = [] {
+//        didSet {
+//            let numberOfPoints = Int(bounds.width)
+//            points = [Double](repeating: 0.0, count: numberOfPoints)
+//            
+//            yCoordinates = [CGFloat](repeating: 0.0, count: numberOfPoints)
+//            dates = [String](repeating: "", count: numberOfPoints)
+//            
+//            let k = Double(data.count) / Double(numberOfPoints)
+//            
+//            for i in 0..<points.count {
+//                        let index = Int(Double(i) * k)
+//                        points[i] = data[index]
+//                
+//                        //dates[i] = dateFormatter.string(from: Date(timeIntervalSince1970: TimeInterval(data[index] / 1000)))  // Uncomment this line and adjust accordingly
+//                    }
+//            for i in 0..<points.count {
+//                let index = Int(Double(i) * k)
+//                                points[i] = data[index]
+//                
+//                   //dates[i] = dateFormatter.string(from: Date(timeIntervalSince1970: TimeInterval(data[index] / 1000)))
+//            }
+//            
+//            if k < 1 { points[points.count - 1] = data[data.count - 2] }
+//            
+//            // for layout bubble view
+//            let value = points.first ?? 0
+//            Formatter.formatCost(label: priceLabel, value: value, maximumFractionDigits: value > 1.0 ? 2 : 5)
+//            
+//            setNeedsDisplay()
+//        }
+//    }
+    
+    
+    
+    
+    var data: [(value: Double, timestamp: Int)] = [] {
         didSet {
             let numberOfPoints = Int(bounds.width)
             points = [Double](repeating: 0.0, count: numberOfPoints)
-            
             yCoordinates = [CGFloat](repeating: 0.0, count: numberOfPoints)
-            dates = [String](repeating: "", count: numberOfPoints)
             
+            // Use the mapped dates from the data array
+            dates = data.map { convertUnixTimeToDateString(unixTime: $0.timestamp) }
+
             let k = Double(data.count) / Double(numberOfPoints)
-            
-            for i in 0..<points.count {
-                        let index = Int(Double(i) * k)
-                        points[i] = data[index]
-                
-                        //dates[i] = dateFormatter.string(from: Date(timeIntervalSince1970: TimeInterval(data[index] / 1000)))  // Uncomment this line and adjust accordingly
-                    }
+
             for i in 0..<points.count {
                 let index = Int(Double(i) * k)
-                                points[i] = data[index]
-                
-                   //dates[i] = dateFormatter.string(from: Date(timeIntervalSince1970: TimeInterval(data[index] / 1000)))
+                if index < data.count {
+                    // Debugging print statements
+                    // print("Type of points[i]: \(type(of: points[i]))")
+                    // print("Type of data[index].value: \(type(of: data[index].value))")
+                    points[i] = data[index].value
+                }
+            }
+
+            if k < 1, data.count > 1 {
+                points[points.count - 1] = data[data.count - 1].value
             }
             
-            if k < 1 { points[points.count - 1] = data[data.count - 2] }
-            
-            // for layout bubble view
+            // For layout bubble view
             let value = points.first ?? 0
             Formatter.formatCost(label: priceLabel, value: value, maximumFractionDigits: value > 1.0 ? 2 : 5)
             
             setNeedsDisplay()
         }
     }
+    
+    
+    
+    
+
+
+
+
+
     
     
     
@@ -268,36 +313,83 @@ private extension ChartView {
         pointView.isHidden = !show
     }
     
+//    func handle(touches: Set<UITouch>) {
+//        
+//        
+//        guard let touch = touches.first, self.bounds.contains(touch.location(in: self)) else {
+//            showBubble(false)
+//            return
+//        }
+//        let xPoint = touch.location(in: self).x
+//        let index = Int(round(xPoint))
+//        
+//        guard index < dates.count else { return }
+//        
+//        
+//        
+//        dateLabel.text = dates[index]
+//        let value = points[index]
+//        Formatter.formatCost(label: priceLabel, value: value, maximumFractionDigits: value > 1.0 ? 2 : 5)
+//        
+//        pointViewconstraint?.constant = yCoordinates[index] - pointView.bounds.width / 2
+//        lineViewconstraint?.constant = xPoint - lineView.bounds.width / 2
+//        
+//        let bubbleHalfWidth = bubbleView.bounds.width / 2
+//        if xPoint <= bubbleHalfWidth {
+//            bubbleViewconstraint?.constant = 0
+//        } else if xPoint >= bounds.width - bubbleHalfWidth {
+//            bubbleViewconstraint?.constant = bounds.width - bubbleView.bounds.width
+//        } else {
+//            bubbleViewconstraint?.constant = xPoint - bubbleHalfWidth
+//        }
+//    }
+    
     func handle(touches: Set<UITouch>) {
-        
-        
-        guard let touch = touches.first, self.bounds.contains(touch.location(in: self)) else {
-            showBubble(false)
+        guard let touch = touches.first, let touchPoint = touches.first?.location(in: self) else {
             return
         }
-        let xPoint = touch.location(in: self).x
-        let index = Int(round(xPoint))
         
-        guard index < dates.count else { return }
+        // Calculate the scaling factor (k) and the index using the x-coordinate of the touch point
+        let k = Double(data.count) / Double(bounds.width)
+        let index = Int(touchPoint.x * k)
         
+        // Ensure index is within the bounds of your data and dates arrays
+        guard index >= 0, index < data.count, index < dates.count else {
+            return
+        }
         
+        // Retrieve the value and date using the scaled index
+        let value = data[index].value
+        let date = convertUnixTimeToDateString(unixTime: data[index].timestamp)
         
-        dateLabel.text = dates[index]
-        let value = points[index]
+        // Update the labels and bubble view constraints
+        dateLabel.text = date
         Formatter.formatCost(label: priceLabel, value: value, maximumFractionDigits: value > 1.0 ? 2 : 5)
         
-        pointViewconstraint?.constant = yCoordinates[index] - pointView.bounds.width / 2
-        lineViewconstraint?.constant = xPoint - lineView.bounds.width / 2
+        // Calculate the y-coordinate based on the scaled index
+        let yCoordinate = yCoordinates[min(index, yCoordinates.count - 1)]
         
-        let bubbleHalfWidth = bubbleView.bounds.width / 2
-        if xPoint <= bubbleHalfWidth {
+        // Update constraints for pointView and lineView
+        pointViewconstraint?.constant = yCoordinate - pointView.frame.height / 2
+        lineViewconstraint?.constant = touchPoint.x - lineView.frame.width / 2
+        
+        // Adjust the bubble view's horizontal position
+        let bubbleHalfWidth = bubbleView.frame.width / 2
+        if touchPoint.x <= bubbleHalfWidth {
             bubbleViewconstraint?.constant = 0
-        } else if xPoint >= bounds.width - bubbleHalfWidth {
-            bubbleViewconstraint?.constant = bounds.width - bubbleView.bounds.width
+        } else if touchPoint.x >= bounds.width - bubbleHalfWidth {
+            bubbleViewconstraint?.constant = bounds.width - bubbleView.frame.width
         } else {
-            bubbleViewconstraint?.constant = xPoint - bubbleHalfWidth
+            bubbleViewconstraint?.constant = touchPoint.x - bubbleHalfWidth
         }
+        
+        // Redraw the view if necessary
+        setNeedsDisplay()
     }
+
+    
+    
+    
     
     func testHandle() {
         guard !data.isEmpty else { return }

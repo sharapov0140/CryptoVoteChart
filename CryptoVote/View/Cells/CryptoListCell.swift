@@ -15,12 +15,7 @@ import UIKit
 
 class CryptoListCell: UITableViewCell {
     
-    
-    
-    
-    
-
-    
+ 
     
     var crypto: cryptoCoinCapJsonPeriod? {
         
@@ -201,8 +196,6 @@ class CryptoListCell: UITableViewCell {
         percetnChng24hLbJSON.anchor(top: nil, leading: nil, bottom: iconImage.bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 2, right: 20), size: .init(width: 0, height: 15))
         
         
-       
-//        priceLabel.centerYAnchor.constraint(equalTo: iconImage.centerYAnchor).isActive = true
         
     }
     

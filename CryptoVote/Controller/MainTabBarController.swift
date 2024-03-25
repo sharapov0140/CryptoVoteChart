@@ -55,25 +55,20 @@ class MainTabBarController: UITabBarController {
     func setupTabBar() {
     //    let videoController = createNavController(vc: CryptoList(), selected: star_black, unselected: #imageLiteral(resourceName: "favorite"))
         let listController = createNavController(vc: CryptoList(), selected: #imageLiteral(resourceName: "list"), unselected: #imageLiteral(resourceName: "list"))
-        let favoriteController = createNavController(vc: FavoriteCryptoList(), selected: #imageLiteral(resourceName: "icons8-duration-finance-75"), unselected: #imageLiteral(resourceName: "icons8-duration-finance-75"))
-        let chatContoller = createNavController(vc: CryptoVote(), selected: #imageLiteral(resourceName: "bars"), unselected: #imageLiteral(resourceName: "bars"))
-        let cryptoSettingVC = createNavController(vc: SettingsStackVC(), selected: #imageLiteral(resourceName: "setting_black"), unselected: #imageLiteral(resourceName: "setting_white"))
+//        let favoriteController = createNavController(vc: FavoriteCryptoList(), selected: #imageLiteral(resourceName: "icons8-duration-finance-75"), unselected: #imageLiteral(resourceName: "icons8-duration-finance-75"))
+//        let chatContoller = createNavController(vc: CryptoVote(), selected: #imageLiteral(resourceName: "bars"), unselected: #imageLiteral(resourceName: "bars"))
+//        let cryptoSettingVC = createNavController(vc: SettingsStackVC(), selected: #imageLiteral(resourceName: "setting_black"), unselected: #imageLiteral(resourceName: "setting_white"))
         
-        viewControllers = [listController, favoriteController, chatContoller, cryptoSettingVC]
+        viewControllers = [listController]
         
         guard let items = tabBar.items else { return }
         
         guard let tabHome = tabBar.items?[0] else {return}
         tabHome.title = "Crypto List"
-        guard let tabPort = tabBar.items?[1] else {return}
-        tabPort.title = "Portfolio"
-        guard let tabVote = tabBar.items?[2] else {return}
-        tabVote.title = "Vote"
-        guard let tabSettings = tabBar.items?[3] else {return}
-        tabSettings.title = "Settings"
+        
         
         for item in items {
-            item.imageInsets = UIEdgeInsets(top: 4, left: 0, bottom: -4, right: 0)
+            item.imageInsets = UIEdgeInsets(top: 1, left: 0, bottom: -1, right: 0)
         }}
     
 
@@ -97,26 +92,4 @@ extension UITabBarController {
     
 }
 
-//extension MainTabBarController: GADBannerViewDelegate {
-//
-//    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-//        print("received ad")
-//    }
-//
-//    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
-//        print(error)
-//    }
-//
-//}
-//
-//final class adView: UIView {
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        backgroundColor = .orange
-//    }
-//
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//
-//}
+

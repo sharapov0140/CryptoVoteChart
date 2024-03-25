@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D018903232C3BFE00BCE146 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D018902232C3BFE00BCE146 /* SettingsViewController.swift */; };
-		0D018905232C3C3D00BCE146 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D018904232C3C3D00BCE146 /* SettingsCell.swift */; };
-		0D018909232C3C9B00BCE146 /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D018908232C3C9B00BCE146 /* SettingsSection.swift */; };
-		0D099D3C22838257009CE2C4 /* FavoriteCryptoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D099D3B22838257009CE2C4 /* FavoriteCryptoListCell.swift */; };
-		0D121AE722718E0C008E6D02 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D121AE622718E0C008E6D02 /* CustomImageView.swift */; };
-		0D121AE92272A0C1008E6D02 /* GitHubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D121AE82272A0C1008E6D02 /* GitHubApi.swift */; };
 		0D4354422213DFEF008A3247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4354412213DFEF008A3247 /* AppDelegate.swift */; };
 		0D4354442213DFEF008A3247 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4354432213DFEF008A3247 /* MainTabBarController.swift */; };
 		0D43544A2213DFEF008A3247 /* CryptoVote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0D4354482213DFEF008A3247 /* CryptoVote.xcdatamodeld */; };
@@ -20,31 +14,12 @@
 		0D43544F2213DFF1008A3247 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D43544D2213DFF1008A3247 /* LaunchScreen.storyboard */; };
 		0D43545A2213DFF1008A3247 /* CryptoVoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4354592213DFF1008A3247 /* CryptoVoteTests.swift */; };
 		0D4354652213DFF1008A3247 /* CryptoVoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4354642213DFF1008A3247 /* CryptoVoteUITests.swift */; };
-		0D4354732213EE1F008A3247 /* FavoriteCryptoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4354722213EE1F008A3247 /* FavoriteCryptoList.swift */; };
-		0D4354752213EEE7008A3247 /* CryptoVote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4354742213EEE7008A3247 /* CryptoVote.swift */; };
 		0D4354772213EF7C008A3247 /* CryptoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4354762213EF7C008A3247 /* CryptoList.swift */; };
-		0D43547B221674E4008A3247 /* SelectedCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D43547A221674E4008A3247 /* SelectedCrypto.swift */; };
-		0D50E78822DE4820005A24A6 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D50E78722DE4820005A24A6 /* RealmModel.swift */; };
 		0D54F731224EE0220072932E /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D54F730224EE0220072932E /* UIView+Layout.swift */; };
-		0D54F73B22516FAD0072932E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D54F73A22516FAD0072932E /* LoginVC.swift */; };
-		0D54F73D22516FBF0072932E /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D54F73C22516FBF0072932E /* SignUpVC.swift */; };
 		0D54F73F225172AD0072932E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D54F73E225172AD0072932E /* GoogleService-Info.plist */; };
-		0D54F7412254109C0072932E /* SelectedCryptoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D54F7402254109C0072932E /* SelectedCryptoCell.swift */; };
-		0D54F74522549CE80072932E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D54F74422549CE80072932E /* Post.swift */; };
-		0D54F74722549D680072932E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D54F74622549D680072932E /* Constants.swift */; };
-		0D661A5B22651FFA00BAFD96 /* CryptoVoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D661A5A22651FFA00BAFD96 /* CryptoVoteCell.swift */; };
 		0D661A5D2265C12E00BAFD96 /* CryptoStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D661A5C2265C12E00BAFD96 /* CryptoStats.swift */; };
-		0D661A5F226881BB00BAFD96 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D661A5E226881BB00BAFD96 /* User.swift */; };
-		0D661A62226AB74300BAFD96 /* CryptoSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D661A61226AB74300BAFD96 /* CryptoSettingVC.swift */; };
-		0D661A64226BD16400BAFD96 /* CryptoVoteSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D661A63226BD16400BAFD96 /* CryptoVoteSelected.swift */; };
-		0D7B9E47237E25E200D5C41D /* SettingsStackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B9E46237E25E200D5C41D /* SettingsStackVC.swift */; };
-		0DA2985B2301DDA8003249EC /* ProtfolioAdjust.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA2985A2301DDA8003249EC /* ProtfolioAdjust.swift */; };
-		0DA2985D23039036003249EC /* ChooseCryptoForPortfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA2985C23039036003249EC /* ChooseCryptoForPortfolio.swift */; };
-		0DA2985F230558E5003249EC /* ChooseCryptoForPortfolioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA2985E230558E5003249EC /* ChooseCryptoForPortfolioCell.swift */; };
 		0DA29861231352AB003249EC /* CoinList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA29860231352AB003249EC /* CoinList.swift */; };
 		0DC308D92259781E006BE08F /* CryptoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC308D82259781E006BE08F /* CryptoListCell.swift */; };
-		0DDE1179233DA24E0086E76D /* TermsOfService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDE1178233DA24E0086E76D /* TermsOfService.swift */; };
-		0DDE117B233DA2640086E76D /* PrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDE117A233DA2640086E76D /* PrivacyPolicy.swift */; };
 		0DF2A27E22A2043A0037CDBB /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF2A27D22A2043A0037CDBB /* Ticker.swift */; };
 		0DF2A28022A2044C0037CDBB /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF2A27F22A2044C0037CDBB /* GlobalData.swift */; };
 		0DF2A28222A2045B0037CDBB /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF2A28122A2045B0037CDBB /* ChartData.swift */; };
@@ -83,12 +58,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D018902232C3BFE00BCE146 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		0D018904232C3C3D00BCE146 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
-		0D018908232C3C9B00BCE146 /* SettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSection.swift; sourceTree = "<group>"; };
-		0D099D3B22838257009CE2C4 /* FavoriteCryptoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCryptoListCell.swift; sourceTree = "<group>"; };
-		0D121AE622718E0C008E6D02 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
-		0D121AE82272A0C1008E6D02 /* GitHubApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubApi.swift; sourceTree = "<group>"; };
 		0D43543E2213DFEF008A3247 /* CryptoVote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoVote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D4354412213DFEF008A3247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D4354432213DFEF008A3247 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -102,31 +71,12 @@
 		0D4354602213DFF1008A3247 /* CryptoVoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoVoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D4354642213DFF1008A3247 /* CryptoVoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoVoteUITests.swift; sourceTree = "<group>"; };
 		0D4354662213DFF1008A3247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0D4354722213EE1F008A3247 /* FavoriteCryptoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCryptoList.swift; sourceTree = "<group>"; };
-		0D4354742213EEE7008A3247 /* CryptoVote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoVote.swift; sourceTree = "<group>"; };
 		0D4354762213EF7C008A3247 /* CryptoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoList.swift; sourceTree = "<group>"; };
-		0D43547A221674E4008A3247 /* SelectedCrypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCrypto.swift; sourceTree = "<group>"; };
-		0D50E78722DE4820005A24A6 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		0D54F730224EE0220072932E /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
-		0D54F73A22516FAD0072932E /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		0D54F73C22516FBF0072932E /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		0D54F73E225172AD0072932E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		0D54F7402254109C0072932E /* SelectedCryptoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCryptoCell.swift; sourceTree = "<group>"; };
-		0D54F74422549CE80072932E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		0D54F74622549D680072932E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		0D661A5A22651FFA00BAFD96 /* CryptoVoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoVoteCell.swift; sourceTree = "<group>"; };
 		0D661A5C2265C12E00BAFD96 /* CryptoStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoStats.swift; sourceTree = "<group>"; };
-		0D661A5E226881BB00BAFD96 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		0D661A61226AB74300BAFD96 /* CryptoSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoSettingVC.swift; sourceTree = "<group>"; };
-		0D661A63226BD16400BAFD96 /* CryptoVoteSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoVoteSelected.swift; sourceTree = "<group>"; };
-		0D7B9E46237E25E200D5C41D /* SettingsStackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStackVC.swift; sourceTree = "<group>"; };
-		0DA2985A2301DDA8003249EC /* ProtfolioAdjust.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtfolioAdjust.swift; sourceTree = "<group>"; };
-		0DA2985C23039036003249EC /* ChooseCryptoForPortfolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCryptoForPortfolio.swift; sourceTree = "<group>"; };
-		0DA2985E230558E5003249EC /* ChooseCryptoForPortfolioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCryptoForPortfolioCell.swift; sourceTree = "<group>"; };
 		0DA29860231352AB003249EC /* CoinList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinList.swift; sourceTree = "<group>"; };
 		0DC308D82259781E006BE08F /* CryptoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListCell.swift; sourceTree = "<group>"; };
-		0DDE1178233DA24E0086E76D /* TermsOfService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfService.swift; sourceTree = "<group>"; };
-		0DDE117A233DA2640086E76D /* PrivacyPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicy.swift; sourceTree = "<group>"; };
 		0DF2A27D22A2043A0037CDBB /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
 		0DF2A27F22A2044C0037CDBB /* GlobalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
 		0DF2A28122A2045B0037CDBB /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
@@ -211,7 +161,6 @@
 				0DF2A27C22A204070037CDBB /* ChartModel */,
 				0D54F74322549CD70072932E /* Model */,
 				0D54F742225410A40072932E /* View */,
-				0D54F73822516F880072932E /* Login */,
 				0D54F73922516F950072932E /* Helpers */,
 				0D661A60226AB6E500BAFD96 /* Controller */,
 				0D4354412213DFEF008A3247 /* AppDelegate.swift */,
@@ -242,21 +191,10 @@
 			path = CryptoVoteUITests;
 			sourceTree = "<group>";
 		};
-		0D54F73822516F880072932E /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				0D54F73A22516FAD0072932E /* LoginVC.swift */,
-				0D54F73C22516FBF0072932E /* SignUpVC.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
 		0D54F73922516F950072932E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				0D54F730224EE0220072932E /* UIView+Layout.swift */,
-				0D54F74622549D680072932E /* Constants.swift */,
-				0D121AE622718E0C008E6D02 /* CustomImageView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -274,12 +212,7 @@
 		0D54F74322549CD70072932E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0D54F74422549CE80072932E /* Post.swift */,
 				0D661A5C2265C12E00BAFD96 /* CryptoStats.swift */,
-				0D661A5E226881BB00BAFD96 /* User.swift */,
-				0D121AE82272A0C1008E6D02 /* GitHubApi.swift */,
-				0D50E78722DE4820005A24A6 /* RealmModel.swift */,
-				0D018908232C3C9B00BCE146 /* SettingsSection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -290,17 +223,6 @@
 				0D4354432213DFEF008A3247 /* MainTabBarController.swift */,
 				0D4354762213EF7C008A3247 /* CryptoList.swift */,
 				0DF2A29622A212120037CDBB /* CoinDetailsViewController.swift */,
-				0D43547A221674E4008A3247 /* SelectedCrypto.swift */,
-				0D4354742213EEE7008A3247 /* CryptoVote.swift */,
-				0D661A63226BD16400BAFD96 /* CryptoVoteSelected.swift */,
-				0D4354722213EE1F008A3247 /* FavoriteCryptoList.swift */,
-				0DA2985C23039036003249EC /* ChooseCryptoForPortfolio.swift */,
-				0DA2985A2301DDA8003249EC /* ProtfolioAdjust.swift */,
-				0D661A61226AB74300BAFD96 /* CryptoSettingVC.swift */,
-				0D018902232C3BFE00BCE146 /* SettingsViewController.swift */,
-				0D7B9E46237E25E200D5C41D /* SettingsStackVC.swift */,
-				0DDE1178233DA24E0086E76D /* TermsOfService.swift */,
-				0DDE117A233DA2640086E76D /* PrivacyPolicy.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -331,12 +253,7 @@
 		0DF2A28E22A208FC0037CDBB /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				0D54F7402254109C0072932E /* SelectedCryptoCell.swift */,
-				0D661A5A22651FFA00BAFD96 /* CryptoVoteCell.swift */,
-				0D099D3B22838257009CE2C4 /* FavoriteCryptoListCell.swift */,
 				0DC308D82259781E006BE08F /* CryptoListCell.swift */,
-				0DA2985E230558E5003249EC /* ChooseCryptoForPortfolioCell.swift */,
-				0D018904232C3C3D00BCE146 /* SettingsCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -623,49 +540,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D661A62226AB74300BAFD96 /* CryptoSettingVC.swift in Sources */,
-				0DA2985B2301DDA8003249EC /* ProtfolioAdjust.swift in Sources */,
 				0DF2A27E22A2043A0037CDBB /* Ticker.swift in Sources */,
 				0DF2A29722A212120037CDBB /* CoinDetailsViewController.swift in Sources */,
 				0D54F731224EE0220072932E /* UIView+Layout.swift in Sources */,
-				0D661A5B22651FFA00BAFD96 /* CryptoVoteCell.swift in Sources */,
 				0DF2A28B22A206620037CDBB /* API.swift in Sources */,
-				0D7B9E47237E25E200D5C41D /* SettingsStackVC.swift in Sources */,
-				0D018903232C3BFE00BCE146 /* SettingsViewController.swift in Sources */,
 				0D4354772213EF7C008A3247 /* CryptoList.swift in Sources */,
-				0D4354732213EE1F008A3247 /* FavoriteCryptoList.swift in Sources */,
-				0DDE117B233DA2640086E76D /* PrivacyPolicy.swift in Sources */,
 				0DF2A28622A2047B0037CDBB /* Coin.swift in Sources */,
 				0DF2A28022A2044C0037CDBB /* GlobalData.swift in Sources */,
-				0D54F74522549CE80072932E /* Post.swift in Sources */,
-				0D43547B221674E4008A3247 /* SelectedCrypto.swift in Sources */,
-				0D018909232C3C9B00BCE146 /* SettingsSection.swift in Sources */,
-				0D018905232C3C3D00BCE146 /* SettingsCell.swift in Sources */,
-				0D661A64226BD16400BAFD96 /* CryptoVoteSelected.swift in Sources */,
-				0D50E78822DE4820005A24A6 /* RealmModel.swift in Sources */,
 				0D4354442213DFEF008A3247 /* MainTabBarController.swift in Sources */,
 				0DF2A29222A20A940037CDBB /* SegmentedControl.swift in Sources */,
-				0D121AE722718E0C008E6D02 /* CustomImageView.swift in Sources */,
 				0DF2A28422A204710037CDBB /* AppStoreLookup.swift in Sources */,
-				0DA2985F230558E5003249EC /* ChooseCryptoForPortfolioCell.swift in Sources */,
 				0DF2A28222A2045B0037CDBB /* ChartData.swift in Sources */,
-				0D661A5F226881BB00BAFD96 /* User.swift in Sources */,
-				0D54F7412254109C0072932E /* SelectedCryptoCell.swift in Sources */,
-				0D121AE92272A0C1008E6D02 /* GitHubApi.swift in Sources */,
 				0DF2A28D22A2079A0037CDBB /* StorageChart.swift in Sources */,
-				0D54F74722549D680072932E /* Constants.swift in Sources */,
-				0D099D3C22838257009CE2C4 /* FavoriteCryptoListCell.swift in Sources */,
 				0DF2A29022A20A700037CDBB /* ChartView.swift in Sources */,
-				0DA2985D23039036003249EC /* ChooseCryptoForPortfolio.swift in Sources */,
-				0D54F73B22516FAD0072932E /* LoginVC.swift in Sources */,
 				0D43544A2213DFEF008A3247 /* CryptoVote.xcdatamodeld in Sources */,
 				0DC308D92259781E006BE08F /* CryptoListCell.swift in Sources */,
 				0DF2A29522A20BC00037CDBB /* Formatter.swift in Sources */,
 				0DF2A28822A204870037CDBB /* Asset.swift in Sources */,
 				0D661A5D2265C12E00BAFD96 /* CryptoStats.swift in Sources */,
-				0D4354752213EEE7008A3247 /* CryptoVote.swift in Sources */,
-				0DDE1179233DA24E0086E76D /* TermsOfService.swift in Sources */,
-				0D54F73D22516FBF0072932E /* SignUpVC.swift in Sources */,
 				0DA29861231352AB003249EC /* CoinList.swift in Sources */,
 				0D4354422213DFEF008A3247 /* AppDelegate.swift in Sources */,
 			);
